@@ -17,7 +17,6 @@ function testWebP(elem) {
 @@include('./burger-menu.js')
 @@include('./favorites-data.js')
 @@include('./favorites.js')
-@@include('./cross-review.js')
 @@include('./slider.js')
 @@include('./profile-icon.js')
 @@include('./popup-auth-handler.js')
