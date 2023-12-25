@@ -1,0 +1,172 @@
+@import "variables";
+
+//^ Файл обнуляющих стилей
+@import "nullstyle";
+
+//^ Файл миксинов
+@import "mixin";
+
+//^ Подключение ширфтов
+@import "fonts";
+
+//^ Файлы стилей страниц
+@import "./_header";
+@import "./_welcome";
+@import "./_about";
+@import "./favorites";
+@import "./coffee-shop";
+@import "./contacts";
+@import "./library-cards";
+@import "./footer";
+@import "./popup-menu";
+@import "./popup-auth";
+@import "./popup-profile";
+@import "./popup-buy_card";
+
+
+
+body, html{
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior:smooth;
+}
+
+body.active {
+    overflow-y: hidden;
+}
+
+
+[class*="__container"] {
+    max-width: $width-container;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+
+    @media (max-width: $width-container) {
+        max-width: 100%;
+    }
+
+    @media (max-width: 630px) {
+        padding: 0 10px;
+    }
+}
+
+[class*="__title-section"] {
+    padding: 5px 0px;
+    color: $col-dark-blue;
+    font-family: Forum;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    text-align: center;
+
+    @media (max-width: $mobile) {
+        font-size: 30px;
+    }
+}
+
+[class*="__line-section"] {
+    margin-top: 15px;
+    width: 50px;
+    height: 1px;
+    flex-shrink: 0;
+    background-color: $col-dark-blue;
+}
+
+[class*="__subtitle-section"] {
+    margin-top: 40px;
+    color: $col-dark;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+[class*="__button"] {
+    border-radius: 2px;
+    outline: 1px solid $col-dark-blue;
+    background-color: inherit;
+    transition: all 0.3s ease 0s;
+    &:hover:enabled {
+        transition: all 0.3s ease 0s;
+        background-color: $col-brown;
+        outline: none;
+    }
+
+    &:active:enabled {
+        transition: all 0.3s ease 0s;
+        color: $col-white;
+    }
+
+    &:disabled {
+        outline: 1px solid $col-brown;
+        color: $col-brown;
+        cursor: auto;
+    }
+}
+
+[class*="__field"] {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+[class*="__field"]:first-child {
+    margin-top: 0;
+}
+
+
+.field {
+	&__input {
+		width: 100%;
+		border: 1px solid $col-brown;
+        margin-top: 10px;
+		color: $col-dark-blue;
+		font-family: Forum;
+		font-size: 16px;
+		padding-left: 5px;
+		line-height: 16px;
+		letter-spacing: 0.6px;
+		background-color: inherit;
+	}
+
+	&__input:-webkit-autofill,
+	&__input:-webkit-autofill:hover,
+	&__input:-webkit-autofill:focus,
+	&__input:-webkit-autofill:active {
+		-webkit-box-shadow: 0 0 0px 1000px white inset !important;
+        -webkit-text-fill-color: $col-grey;
+	}
+
+	&__input.error {
+		border: 2px solid red;
+	}
+
+	&__error {
+		margin-top: 5px;
+		font-size: 16px;
+		color: red;
+		font-family: Forum;
+	}
+
+	&__label {
+		color: $col-dark;
+		text-align: center;
+		font-family: Inter;
+		font-size: 15px;
+		line-height: 20px; /* 133.333% */
+		letter-spacing: 0.3px;
+	}
+}
+
+
+

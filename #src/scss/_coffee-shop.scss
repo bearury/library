@@ -1,0 +1,156 @@
+.coffee-shop {
+	margin-top: 55px;
+	// .coffee-shop__container
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__subtitle-section {
+		letter-spacing: 2px;
+        @media (max-width: $tablet) and (min-width: calc($tablet - 5px)){
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+
+        @media (max-width: $mobile) {
+            font-size: calc(15px + (20 - 15) * ((100vw - 320px) / (650 - 320)));
+            line-height: 30px;
+        }
+	}
+
+	// .coffee-shop__menu
+
+	&__menu {
+		margin-top: 40px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+        @media (max-width: $desktop){
+            flex-direction: column;
+        }
+        @media (max-width: $mobile) {
+            margin-top: 20px;
+        }
+	}
+
+    &__block:last-child {
+        @media (max-width: $desktop) {
+            margin-top: 40px;
+        }
+    }
+
+}
+.menu {
+	// .menu__block
+
+	&__list-shop {
+        &_right{
+            text-align: end;
+            @media (max-width: $mobile) {
+                text-align: start;
+            }
+        }
+	}
+
+	&__list-shop_right > &__item-shop {
+        @media (max-width: $desktop) {
+            justify-content: end;
+        }
+
+        @media (max-width: $mobile) {
+            justify-content: space-between;
+        }
+    }
+
+	// .menu__title
+
+	&__title {
+		color: $col-brown;
+		font-family: Forum;
+		font-size: 40px;
+		line-height: 40px; /* 100% */
+		letter-spacing: 2px;
+		text-transform: capitalize;
+        &_right{
+            text-align: end;
+            @media (max-width: $mobile) {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: $mobile) {
+            font-size: 30px;
+        }
+	}
+
+	// .menu__item
+
+	&__item-shop {
+        margin-top: 40px;
+
+        color: $col-dark;
+		font-family: Inter;
+		font-size: 20px;
+		line-height: 40px; /* 200% */
+		letter-spacing: 2px;
+		text-transform: capitalize;
+
+        display: flex;
+        align-items: center;
+
+        @media (max-width: $mobile) {
+            margin-top: 0px;
+            font-size: 15px;
+            justify-content: space-between;
+        }
+	}
+
+	// .menu__meal
+
+	&__meal {
+        width: 235px;
+        span{
+            text-transform: none;
+        }
+
+        @media (max-width: $mobile) {
+            flex-shrink: 0;
+            width: 190px;
+        }
+
+        &_right{
+            margin-right: 40px;
+            @media (max-width: $mobile) {
+                margin-right: 0px;
+            }
+        }
+	}
+
+	// .menu__line
+
+	&__line {
+        width: 100px;
+        height: 1px;
+        background-color: $col-brown;
+        margin: 0 20px;
+
+        flex-shrink: 1;
+        @media (max-width: $mobile) {
+            margin: 0 5px;
+        }
+	}
+
+	// .menu__price
+
+	&__price {
+        font-family: Forum;
+        margin-left: 40px;
+        @media (max-width: $mobile) {
+            margin-left: 20px;
+        }
+	}
+}

@@ -1,0 +1,87 @@
+.popup-menu {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: -50px;
+
+
+	background-color: $col-white;
+	width: 80px;
+	height: 115px;
+
+	transform: scale(0.5);
+    color: $col-dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2px;
+    opacity: 0;
+    transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;;
+
+	// .popup-profile__title
+
+	&__title {
+        padding: 5px 0px;
+		font-family: Inter-Bold;
+		font-size: 15px;
+		line-height: 20px; /* 133.333% */
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 2px;
+            background-color: $col-brown;
+        }
+	}
+
+    &__title.card {
+        font-size: 12px;
+        color: $col-brown;
+        font-family: Inter-Bold;
+
+    }
+
+	&__item {
+        margin-top: 15px;
+		font-family: Inter;
+		font-size: 15px;
+		line-height: 20px; /* 133.333% */
+        background-color: initial;
+        color: $col-dark-blue;
+	}
+
+    &__item:last-child {
+        margin-top: 10px;
+    }
+}
+
+.popup-menu.active {
+    z-index: 2;
+    transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
+    opacity: 1;
+    transform: scale(1);
+}
+
+@media (max-width: $width-container) {
+	.popup-menu {
+		transform: scale(0.5);
+	}
+
+    .popup-menu.active {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: $desktop) {
+	.popup-menu {
+		transform: scale(0.5);
+	}
+
+    .popup-menu.active {
+        transform: scale(1);
+    }
+}

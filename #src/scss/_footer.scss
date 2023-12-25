@@ -1,0 +1,145 @@
+.footer {
+	background-color: $col-dark-blue;
+	margin-top: 40px;
+	color: $col-white;
+
+	// .footer__container
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .footer__block
+
+	&__block {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		margin-top: 20px;
+
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px  ;
+        }
+	}
+
+	&__block:last-child {
+		margin-top: 28px;
+		padding: 45px 0px;
+		position: relative;
+
+		font-family: Inter;
+		font-size: 20px;
+		line-height: 20px; /* 100% */
+		letter-spacing: 2px;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background-color: $col-white;
+		}
+	}
+
+	// .footer__contacts
+
+	&__contacts {
+	}
+
+	// .footer__address
+
+	&__address {
+		color: $col-white;
+		font-family: Inter;
+		font-size: 15px;
+		line-height: 20px; /* 133.333% */
+        @media (max-width: $mobile) {
+            text-align: center;
+        }
+	}
+
+	// .footer__social-network
+
+	&__social-network {
+		display: flex;
+		margin-top: 15px;
+		gap: 15px;
+        @media (max-width: $mobile) {
+            justify-content: center;
+        }
+	}
+
+	// .footer__working-hours
+
+	&__working-hours {
+		display: flex;
+		flex-direction: column;
+
+		font-family: Inter;
+		font-size: 15px;
+		line-height: 20px; /* 133.333% */
+	}
+
+	// .footer__year
+
+	&__year {
+	}
+
+	// .footer__school-name
+
+	&__school-name {
+		margin-left: 100px;
+		a {
+			color: $col-white;
+		}
+
+        @media (max-width: $desktop) {
+            margin-left: 50px;
+        }
+
+        @media (max-width: $mobile) {
+            margin-left: 0px;
+            text-align: center;
+        }
+	}
+
+	// .footer__username
+
+	&__username {
+		a {
+			color: $col-white;
+		}
+	}
+}
+.social-network {
+	// .social-network__icon
+
+	&__icon {
+	}
+}
+.working-hours {
+	// .working-hours__weekday
+
+	&__weekday:last-child {
+		margin-top: 10px;
+	}
+
+	// .working-hours__day
+
+	&__day {
+		text-align: end;
+        @media (max-width: $mobile) {
+            text-align: center;
+        }
+	}
+
+	// .working-hours__time
+
+	&__time {
+	}
+}
